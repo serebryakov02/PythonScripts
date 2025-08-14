@@ -22,7 +22,7 @@ if __name__ == '__main__':
             content = f.readlines()
 
         if not content:
-            print(f'File {file_name} is empty.')
+            print(f"File '{file_name}' is empty.")
             sys.exit(1)
 
         new_content = content[:line_number - 1]
@@ -31,6 +31,6 @@ if __name__ == '__main__':
 
         print(f"File '{file_name}' truncated from line {line_number}.")
     except FileNotFoundError:
-        print(f'File {file_name} not found.')
+        print(f"File '{file_name}' not found.")
     except PermissionError:
-        print(f'Permission denied: {file_name}')
+        print(f"Permission denied: '{file_name}'")
